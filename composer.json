@@ -1,0 +1,19 @@
+{
+    "description": "CiFireCMS Framework",
+    "name": "cifirecms/cifirecms",
+    "type": "project",
+    "license": "MIT",
+    "homepage": "https://github.com/CiFireCMS",
+    "support": {
+        "source": "https://github.com/CiFireCMS/cifirecms"
+    },
+    "require": {
+		"php": ">=5.3.7",
+        "cifirecms/installer": "v1.*",
+        "codeigniter/framework": "3.1.11",
+        "vlucas/phpdotenv": "^4.1"
+    },
+    "suggest": {
+        "paragonie/random_compat": "Provides better randomness in PHP 5.x"
+    }
+}
