@@ -333,7 +333,9 @@ function cfCompogen(){
 		});
 	});
 }
-	
+
+
+// Updated Tny_MCE function with proper configuration
 function Tny_MCE(element){
 	
 	tinymce.init({
@@ -341,7 +343,6 @@ function Tny_MCE(element){
 		height: 500,
 		license_key: 'gpl',
 		plugins: [
-			// Gratis (community edition)
 			'anchor', 
 			'autolink', 
 			'charmap', 
@@ -354,10 +355,11 @@ function Tny_MCE(element){
 			'table', 
 			'visualblocks', 
 			'wordcount',
-			'image'
+			'image',
+			'responsivefilemanager'
 		],
 		toolbar_mode: 'wrap',
-		toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | alignleft aligncenter alignright alignjustify lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+		toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | responsivefilemanager link image media table | alignleft aligncenter alignright alignjustify lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
 		directionality: 'ltr',
 		font_formats: 'Amiri=Amiri, serif; Arial=Arial, Helvetica, sans-serif; Times New Roman=Times New Roman, serif;',
 		toolbar_sticky: true,
@@ -374,6 +376,17 @@ function Tny_MCE(element){
 			'https://fonts.googleapis.com/css2?family=Amiri&display=swap',
 			'https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic&display=swap'
 		],
+		// Filemanager settings - make sure these are properly defined
+		external_filemanager_path: site_url+'plugins/filemanager/',
+		filemanager_title: 'File Manager',
+		filemanager_access_key: typeof _FMKEY !== 'undefined' ? _FMKEY : 'default_key',
+		filemanager_sort_by: '',
+		filemanager_descending: false,
+		filemanager_subfolder: '',
+		filemanager_crossdomain: false,
+		external_plugins: {
+			'responsivefilemanager': site_url + 'plugins/tinymce/plugins/responsivefilemanager/plugin.min.js'
+		}
 	});
 }
 
