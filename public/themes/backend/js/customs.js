@@ -59,7 +59,7 @@ function dataTableDrawCallback(apiTable,urlTable) {
 		pk = [$(this).attr('data-pk')];
 		cfSwalDelete(pk, apiTable, deleteLocation);
 	});
-		
+	
 	$('.delete_trash').on('click', function(i) {
 		var pk = [];
 		pk = [$(this).attr('data-pk')];
@@ -217,7 +217,7 @@ function cfSwalDeleteTrash(pk,api_table,uri){
 				});
 			},
 		})
-		 
+		
 	});
 }
 
@@ -333,10 +333,13 @@ function cfCompogen(){
 		});
 	});
 }
+	
 function Tny_MCE(element){
+	
 	tinymce.init({
 		selector: element,
 		height: 500,
+		license_key: 'gpl',
 		plugins: [
 			// Gratis (community edition)
 			'anchor', 
@@ -351,11 +354,10 @@ function Tny_MCE(element){
 			'table', 
 			'visualblocks', 
 			'wordcount',
-			'image',
-			'youtube'
+			'image'
 		],
 		toolbar_mode: 'wrap',
-		toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media youtube table | alignleft aligncenter alignright alignjustify lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+		toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | alignleft aligncenter alignright alignjustify lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
 		directionality: 'ltr',
 		font_formats: 'Amiri=Amiri, serif; Arial=Arial, Helvetica, sans-serif; Times New Roman=Times New Roman, serif;',
 		toolbar_sticky: true,
@@ -430,10 +432,10 @@ function cfTnyMCE(element,height){
 			"advlist autolink link image lists charmap print preview hr anchor pagebreak",
 			"searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
 			"table directionality emoticons paste textcolor",
-			"code fullscreen youtube autoresize codemirror codesample responsivefilemanager pagebreak"
+			"code fullscreen autoresize codemirror codesample responsivefilemanager pagebreak"
 		],
 		toolbar1:'undo redo | bold italic underline forecolor backcolor | alignjustify alignleft aligncenter alignright | outdent indent bullist numlist table | pagebreak',
-		toolbar2:'removeformat styleselect | fontsizeselect | responsivefilemanager image media youtube | hr charmap link unlink  codesample code | visualblocks preview fullscreen',
+		toolbar2:'removeformat styleselect | fontsizeselect | responsivefilemanager image media | hr charmap link unlink  codesample code | visualblocks preview fullscreen',
 		fixed_toolbar_container: _element, // tempatkan toolbar secara manual
 		branding: false,
 		menubar: false,

@@ -192,12 +192,12 @@
 </div>
 <?=form_close();?>
 <script>
-	$(".select2").select2({
-    templateResult: function (data) {
-        if ($(data.element).is(':disabled')) {
-            return $('<span style="font-weight:bold; color:#666;">'+data.text+'</span>');
-        }
-        return data.text;
-    }
-});
+	// $(".select2").select2({
+    // templateResult: function (data) {
+        // if ($(data.element).is(':disabled')) {
+            // return $('<span style="font-weight:bold; color:#666;">'+data.text+'</span>');
+        // }
+        // return data.text;
+    // }
+// });
 </script>

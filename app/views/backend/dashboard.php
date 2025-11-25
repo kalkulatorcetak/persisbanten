@@ -217,7 +217,7 @@
 			<script src="<?=site_url('plugins/slimscroll/jquery.slimscroll.min.js');?>"></script>
 			<script src="<?=site_url('plugins/perfect-scrollbar/perfect-scrollbar.js');?>"></script>
 			<script src="<?=site_url('plugins/datatable/datatables.min.js');?>"></script>
-			<!--script src="https://cdn.tiny.cloud/1/139hnl5epjk2bbc4o7d8seqdxc8yz43noxmbodkcmjg3bfsy/tinymce/8/tinymce.min.js" referrerpolicy="origin" crossorigin="anonymous"></script-->
+			
 			<link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.4.1/css/rowReorder.dataTables.min.css">
 			<script src="https://cdn.datatables.net/rowreorder/1.4.1/js/dataTables.rowReorder.min.js"></script>
 			
@@ -290,5 +290,6 @@
 					require_once(VIEWPATH . 'mod/'.$this->mod.'/script.php');
 				}
 			?>
+			 
 		</body>
-	</html>	
+	</html>			
